@@ -51,7 +51,7 @@
         tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
-        android:id="@+id/update_cus_uName"
+        android:id="@+id/cus_uName"
         android:layout_width="236dp"
         android:layout_height="39dp"
         android:layout_marginBottom="32dp"
@@ -62,14 +62,14 @@
         android:textAlignment="center"
         android:textColor="#000000"
         android:textColorHint="#919191"
-        app:layout_constraintBottom_toTopOf="@+id/update_cus_Email"
+        app:layout_constraintBottom_toTopOf="@+id/cus_Email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
-        android:id="@+id/update_cus_Email"
+        android:id="@+id/cus_Email"
         android:layout_width="236dp"
         android:layout_height="39dp"
         android:layout_marginBottom="88dp"
@@ -87,7 +87,7 @@
         tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
-        android:id="@+id/update_cus_Name"
+        android:id="@+id/cus_Name"
         android:layout_width="236dp"
         android:layout_height="39dp"
         android:layout_marginBottom="32dp"
@@ -98,7 +98,7 @@
         android:textAlignment="center"
         android:textColor="#000000"
         android:textColorHint="#919191"
-        app:layout_constraintBottom_toTopOf="@+id/update_cus_uName"
+        app:layout_constraintBottom_toTopOf="@+id/cus_uName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -109,7 +109,7 @@
         android:layout_width="240dp"
         android:layout_height="189dp"
         android:background="@drawable/customer"
-        app:layout_constraintBottom_toTopOf="@+id/update_cus_Name"
+        app:layout_constraintBottom_toTopOf="@+id/cus_Name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"

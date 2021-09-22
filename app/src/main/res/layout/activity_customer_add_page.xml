@@ -21,7 +21,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/update_cus_uName"
+        android:id="@+id/cus_uName"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:layout_marginBottom="32dp"
@@ -32,20 +32,38 @@
         android:textAlignment="center"
         android:textColor="#000000"
         android:textColorHint="#919191"
-        app:layout_constraintBottom_toTopOf="@+id/update_cus_Email"
+        app:layout_constraintBottom_toTopOf="@+id/cus_Email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
-        android:id="@+id/update_cus_Email"
+        android:id="@+id/cus_Email"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
-        android:layout_marginBottom="48dp"
+        android:layout_marginBottom="32dp"
         android:background="@drawable/customer_input"
         android:ems="10"
         android:hint="@string/Customer_Email_Address"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textColorHint="#919191"
+        app:layout_constraintBottom_toTopOf="@+id/cus_contact"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/cus_contact"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/customer_input"
+        android:ems="10"
+        android:hint="@string/Customer_Contact"
         android:inputType="textPersonName"
         android:textAlignment="center"
         android:textColor="#000000"
@@ -57,7 +75,7 @@
         tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
-        android:id="@+id/update_cus_Name"
+        android:id="@+id/cus_Name"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:layout_marginBottom="32dp"
@@ -68,7 +86,7 @@
         android:textAlignment="center"
         android:textColor="#000000"
         android:textColorHint="#919191"
-        app:layout_constraintBottom_toTopOf="@+id/update_cus_uName"
+        app:layout_constraintBottom_toTopOf="@+id/cus_uName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -79,11 +97,11 @@
         android:layout_width="240dp"
         android:layout_height="189dp"
         android:background="@drawable/d"
-        app:layout_constraintBottom_toTopOf="@+id/update_cus_Name"
+        app:layout_constraintBottom_toTopOf="@+id/cus_Name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.51" />
+        app:layout_constraintVertical_bias="0.736" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
