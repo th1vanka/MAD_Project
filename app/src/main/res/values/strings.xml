@@ -8,4 +8,13 @@
     <string name="cus_Delete_button">Delete</string>
     <string name="Customer_Update_button">Update</string>
     <string name="Customer_History_Button">History</string>
+    <string name="Booking_id">Booking id</string>
+    <string name="booking_date">Booking_date</string>
+    <string name="Customer_Contact">Customer Contact</string>
+    <string name="bookimg_confirm">Confirm</string>
+    <string name="Booking_delete">Delete</string>
+    <string name="Meter_Reading">Meter Reading</string>
+
+    <string name="Order_Date">Order Date</string>
+    <string name="OOrder_ID">Order ID</string>
 </resources>

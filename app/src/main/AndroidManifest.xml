@@ -10,25 +10,39 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Auto_Care">
         <activity
-            android:name=".Customer_Delete_Page"
+            android:name=".Order_Details_Page"
+            android:exported="true" />
+        <activity
+            android:name=".Order_Page"
             android:exported="true">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
         <activity
-            android:name=".Customer_Add_Page"
+            android:name=".Booking_View_Page"
             android:exported="true">
 
         </activity>
+        <activity
+            android:name=".Booking_Details_Page"
+            android:exported="true" />
+        <activity
+            android:name=".Customer_Delete_Page"
+            android:exported="true" />
+        <activity
+            android:name=".Customer_Add_Page"
+            android:exported="true" />
         <activity
             android:name=".Customer_View_Page"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
     </application>
 
 </manifest>
