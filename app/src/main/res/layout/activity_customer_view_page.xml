@@ -4,9 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
-    android:backgroundTint="#FFFFFF"
-    tools:context=".MainActivity">
-
+    tools:context=".Customer_View_Page">
 
 </androidx.constraintlayout.widget.ConstraintLayout>

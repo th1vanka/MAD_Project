@@ -7,4 +7,7 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="insert_btn">#5185DA</color>
+    <color name="Delete">#E1473D</color>
+    <color name="Update">#52AD11</color>
 </resources>

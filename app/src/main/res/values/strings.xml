@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Auto_Care</string>
+    <string name="Customer_Name">Customer Name</string>
+    <string name="Customer_user_name">Customer User Name</string>
+    <string name="Customer_Email_Address">Customer Email Address</string>
+    <string name="Customer_contact">Customer Contact</string>
+    <string name="Cutomer_Add_Button">Add</string>
+    <string name="cus_Delete_button">Delete</string>
+    <string name="Customer_Update_button">Update</string>
+    <string name="Customer_History_Button">History</string>
 </resources>
