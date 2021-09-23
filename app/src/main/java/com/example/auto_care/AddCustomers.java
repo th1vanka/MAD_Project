@@ -5,17 +5,20 @@ public class AddCustomers {
     private String cusUserName;
     private String cusEmail;
     private String phone;
+    private String password;
 
 
     public AddCustomers(){
 
     }
 
-    public AddCustomers(String name,String uname,String mail,String no){
+    public AddCustomers(String name,String uname,String mail,String no ,String pass){
         this.cusName=name;
         this.cusUserName=uname;
         this.cusEmail=mail;
         this.phone=no;
+        this.password=pass;
+
     }
 
     public String getCusName() {
@@ -48,5 +51,13 @@ public class AddCustomers {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public String getPPassword() {
+        return password;
+    }
+
+    public void setPassword(String pass) {
+        this.password = pass;
     }
 }

@@ -17,4 +17,6 @@
 
     <string name="Order_Date">Order Date</string>
     <string name="OOrder_ID">Order ID</string>
+    <string name="Customer_password">Password</string>
+    <string name="Customer_Repass">Re-enter the password</string>
 </resources>

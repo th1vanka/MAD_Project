@@ -7,78 +7,23 @@
     android:background="@drawable/background_color"
     tools:context=".Customer_Add_Page">
 
-    <Button
-        android:id="@+id/cus_add_btn"
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="76dp"
-        android:backgroundTint="@color/insert_btn"
-        android:text="@string/Cutomer_Add_Button"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
 
-    <EditText
-        android:id="@+id/cus_uName"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_marginBottom="32dp"
-        android:background="@drawable/customer_input"
-        android:ems="10"
-        android:hint="@string/Customer_user_name"
-        android:inputType="textPersonName"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        android:textColorHint="#919191"
-        app:layout_constraintBottom_toTopOf="@+id/cus_Email"
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="231dp"
+        android:layout_height="161dp"
+        android:background="@drawable/d"
+        app:layout_constraintBottom_toTopOf="@+id/cus_Name"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="TouchTargetSizeCheck" />
-
-    <EditText
-        android:id="@+id/cus_Email"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_marginBottom="32dp"
-        android:background="@drawable/customer_input"
-        android:ems="10"
-        android:hint="@string/Customer_Email_Address"
-        android:inputType="textPersonName"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        android:textColorHint="#919191"
-        app:layout_constraintBottom_toTopOf="@+id/cus_contact"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="TouchTargetSizeCheck" />
-
-    <EditText
-        android:id="@+id/cus_contact"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_marginBottom="32dp"
-        android:background="@drawable/customer_input"
-        android:ems="10"
-        android:hint="@string/Customer_Contact"
-        android:inputType="textPersonName"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        android:textColorHint="#919191"
-        app:layout_constraintBottom_toTopOf="@+id/cus_add_btn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="TouchTargetSizeCheck" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.338" />
 
     <EditText
         android:id="@+id/cus_Name"
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="40dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/customer_input"
         android:ems="10"
         android:hint="@string/Customer_Name"
@@ -88,20 +33,114 @@
         android:textColorHint="#919191"
         app:layout_constraintBottom_toTopOf="@+id/cus_uName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="TouchTargetSizeCheck" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="240dp"
-        android:layout_height="189dp"
-        android:background="@drawable/d"
-        app:layout_constraintBottom_toTopOf="@+id/cus_Name"
+    <EditText
+        android:id="@+id/cus_uName"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/customer_input"
+        android:ems="10"
+        android:hint="@string/Customer_user_name"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textColorHint="#919191"
+        app:layout_constraintBottom_toTopOf="@+id/cus_Email"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.736" />
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/cus_Email"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/customer_input"
+        android:ems="10"
+        android:hint="@string/Customer_Email_Address"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textColorHint="#919191"
+        app:layout_constraintBottom_toTopOf="@+id/cus_contact"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/cus_contact"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/customer_input"
+        android:ems="10"
+        android:hint="@string/Customer_Contact"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+
+        android:textColor="#000000"
+        android:textColorHint="#919191"
+        app:layout_constraintBottom_toTopOf="@+id/cus_passw"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+
+    <EditText
+        android:id="@+id/cus_passw"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/customer_input"
+        android:ems="10"
+        android:hint="@string/Customer_password"
+        android:inputType="textPassword"
+        android:textAlignment="center"
+        android:textColor="#000000"
+
+        android:textColorHint="#919191"
+        app:layout_constraintBottom_toTopOf="@+id/cus_repass"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/cus_repass"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="28dp"
+        android:background="@drawable/customer_input"
+        android:ems="10"
+        android:hint="@string/Customer_Repass"
+        android:inputType="textPassword"
+        android:textAlignment="center"
+
+        android:textColor="#000000"
+        android:textColorHint="#919191"
+        app:layout_constraintBottom_toTopOf="@+id/cus_add_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+
+
+    <Button
+        android:id="@+id/cus_add_btn"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/insert_btn"
+        android:text="@string/Cutomer_Add_Button"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
