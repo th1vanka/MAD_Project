@@ -13,14 +13,14 @@
         android:layout_width="231dp"
         android:layout_height="161dp"
         android:background="@drawable/d"
-        app:layout_constraintBottom_toTopOf="@+id/cus_Name"
+        app:layout_constraintBottom_toTopOf="@+id/cus_DName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.338" />
 
     <EditText
-        android:id="@+id/cus_Name"
+        android:id="@+id/cus_DName"
         android:layout_width="250dp"
         android:layout_height="40dp"
         android:layout_marginBottom="16dp"

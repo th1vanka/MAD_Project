@@ -2,9 +2,15 @@ package com.example.auto_care;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import androidx.annotation.Nullable;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Queue;
 
 public class DbHandler extends SQLiteOpenHelper {
 
@@ -46,6 +52,7 @@ public class DbHandler extends SQLiteOpenHelper {
         onCreate(db);
     }
 
+    //add customer details
 
     public void addCustomer(AddCustomers cus){
         SQLiteDatabase sqLiteDatabase= getWritableDatabase();
@@ -63,6 +70,30 @@ public class DbHandler extends SQLiteOpenHelper {
         //if you want you can close the database
         sqLiteDatabase.close();
 
+    }
+
+    //get all cus details
+
+    public List<AddCustomers> getAllDetails(){
+        List<AddCustomers> cus =new ArrayList();
+        SQLiteDatabase db = getReadableDatabase();
+        String query = "SELECT * FROM "+TABLE_NAME;
+
+        Cursor cursor = db.rawQuery(query,null);
+        if(cursor.moveToFirst()){
+            do{
+                AddCustomers addCustomers = new AddCustomers();
+
+                addCustomers.setCusName(cursor.getString(0));
+                addCustomers.setCusUserName(cursor.getString(1));
+                addCustomers.setCusEmail(cursor.getString(2));
+                addCustomers.setPhone(cursor.getString(3));
+                addCustomers.setPassword(cursor.getString(4));
+
+                cus.add(addCustomers);
+            }while (cursor.moveToNext());
+        }
+        return cus;
     }
 
 

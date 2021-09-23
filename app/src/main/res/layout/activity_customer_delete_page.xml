@@ -7,48 +7,37 @@
     android:background="@drawable/background_color"
     tools:context=".Customer_Delete_Page">
 
-    <Button
-        android:id="@+id/cus_delete_btn"
-        android:layout_width="96dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginBottom="108dp"
-        android:backgroundTint="@color/Delete"
-        android:text="@string/cus_Delete_button"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="228dp"
+        android:layout_height="180dp"
+        android:background="@drawable/customer"
+        app:layout_constraintBottom_toTopOf="@+id/cus_DName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.666" />
+
+    <EditText
+        android:id="@+id/cus_DName"
+        android:layout_width="236dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/customer_input"
+        android:ems="10"
+        android:hint="@string/Customer_Name"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textColorHint="#919191"
+        app:layout_constraintBottom_toTopOf="@+id/cus_uName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="TouchTargetSizeCheck" />
 
-    <Button
-        android:id="@+id/cus_update_btn"
-        android:layout_width="96dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="108dp"
-        android:backgroundTint="@color/Update"
-        android:text="@string/Customer_Update_button"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.019"
-        app:layout_constraintStart_toEndOf="@+id/cus_delete_btn"
-        tools:ignore="TouchTargetSizeCheck" />
 
-    <Button
-        android:id="@+id/cus_history_btn"
-        android:layout_width="120dp"
-        android:layout_height="44dp"
-        android:layout_marginBottom="52dp"
-        android:backgroundTint="@color/insert_btn"
-        android:text="@string/Customer_History_Button"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cus_update_btn"
-        app:layout_constraintVertical_bias="1.0"
-        tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
         android:id="@+id/cus_uName"
@@ -68,11 +57,12 @@
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="TouchTargetSizeCheck" />
 
+
     <EditText
         android:id="@+id/cus_Email"
         android:layout_width="236dp"
         android:layout_height="39dp"
-        android:layout_marginBottom="88dp"
+        android:layout_marginBottom="32dp"
         android:background="@drawable/customer_input"
         android:ems="10"
         android:hint="@string/Customer_Email_Address"
@@ -80,41 +70,56 @@
         android:textAlignment="center"
         android:textColor="#000000"
         android:textColorHint="#919191"
-        app:layout_constraintBottom_toTopOf="@+id/cus_history_btn"
+        app:layout_constraintBottom_toTopOf="@+id/cus_dcon"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
-        android:id="@+id/cus_Name"
+        android:id="@+id/cus_dcon"
         android:layout_width="236dp"
         android:layout_height="39dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="124dp"
         android:background="@drawable/customer_input"
         android:ems="10"
-        android:hint="@string/Customer_Name"
+        android:hint="@string/Customer_Contact"
         android:inputType="textPersonName"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textColorHint="#919191"
-        app:layout_constraintBottom_toTopOf="@+id/cus_uName"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="TouchTargetSizeCheck" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="240dp"
-        android:layout_height="189dp"
-        android:background="@drawable/customer"
-        app:layout_constraintBottom_toTopOf="@+id/cus_Name"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+    <Button
+        android:id="@+id/cus_delete_btn"
+        android:layout_width="108dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginBottom="52dp"
+        android:backgroundTint="@color/Delete"
+        android:text="@string/cus_Delete_button"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.779" />
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/cus_history_btn"
+        android:layout_width="108dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="52dp"
+        android:backgroundTint="@color/insert_btn"
+        android:text="@string/Customer_History_Button"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.177"
+        app:layout_constraintStart_toEndOf="@+id/cus_delete_btn"
+        tools:ignore="TouchTargetSizeCheck" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

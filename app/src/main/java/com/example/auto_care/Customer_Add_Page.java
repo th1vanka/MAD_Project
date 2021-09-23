@@ -2,10 +2,7 @@ package com.example.auto_care;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Dialog;
 import android.content.Context;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -15,6 +12,7 @@ import android.widget.Toast;
 public class Customer_Add_Page extends AppCompatActivity {
 
     private EditText name,Uname,email,pno,password,rePassword;
+
     private Button add ,close;
 
     private DbHandler dbHandler;
@@ -30,7 +28,7 @@ public class Customer_Add_Page extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_customer_add_page);
 
-        name=findViewById(R.id.cus_Name);
+        name=findViewById(R.id.cus_DName);
         Uname=findViewById(R.id.cus_uName);
         email=findViewById(R.id.cus_Email);
         pno=findViewById(R.id.cus_contact);
@@ -86,7 +84,6 @@ public class Customer_Add_Page extends AppCompatActivity {
             password.setError("check the password");
             return false;
         }
-
         else{
             return true;
         }
