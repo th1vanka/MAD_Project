@@ -135,7 +135,7 @@
 
     <Button
         android:id="@+id/booking_delete_btn"
-        android:layout_width="108dp"
+        android:layout_width="120dp"
         android:layout_height="48dp"
         android:layout_marginStart="92dp"
         android:backgroundTint="@color/Delete"
@@ -149,14 +149,14 @@
 
     <Button
         android:id="@+id/booking_confirm_btn"
-        android:layout_width="108dp"
+        android:layout_width="120dp"
         android:layout_height="48dp"
         android:backgroundTint="@color/Confitm"
-        android:text="@string/bookimg_confirm"
+        android:text="Complete"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.203"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/booking_delete_btn"
         app:layout_constraintTop_toBottomOf="@+id/booking_cus_meterReading"
         app:layout_constraintVertical_bias="0.333"

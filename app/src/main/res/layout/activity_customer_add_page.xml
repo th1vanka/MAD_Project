@@ -109,11 +109,12 @@
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="TouchTargetSizeCheck" />
 
+
     <EditText
         android:id="@+id/cus_repass"
         android:layout_width="250dp"
         android:layout_height="40dp"
-        android:layout_marginBottom="28dp"
+        android:layout_marginBottom="20dp"
         android:background="@drawable/customer_input"
         android:ems="10"
         android:hint="@string/Customer_Repass"
@@ -128,19 +129,29 @@
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="TouchTargetSizeCheck" />
 
-
-
     <Button
         android:id="@+id/cus_add_btn"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginBottom="28dp"
         android:backgroundTint="@color/insert_btn"
         android:text="@string/Cutomer_Add_Button"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/cus_show"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:backgroundTint="@color/Confitm"
+        android:text="@string/Customer_Show"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.12"
+        app:layout_constraintStart_toEndOf="@+id/cus_add_btn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

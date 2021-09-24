@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Queue;
+import java.util.SplittableRandom;
 
 public class DbHandler extends SQLiteOpenHelper {
 
@@ -94,6 +95,22 @@ public class DbHandler extends SQLiteOpenHelper {
             }while (cursor.moveToNext());
         }
         return cus;
+    }
+
+    //item delete
+    public void deleteCus(String mail){
+        SQLiteDatabase sqLiteDatabase=getWritableDatabase();
+        sqLiteDatabase.delete(TABLE_NAME,EMAIL +" =?", new String[]{String.valueOf(mail)});
+        sqLiteDatabase.close();
+    }
+
+    //customer count
+    public int countCustomers(){
+        SQLiteDatabase sqLiteDatabase=getReadableDatabase();
+        String query= "SELECT * FROM " + TABLE_NAME;
+
+        Cursor cursor= sqLiteDatabase.rawQuery(query,null);
+        return cursor.getCount();
     }
 
 

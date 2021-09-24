@@ -3,6 +3,7 @@ package com.example.auto_care;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -13,7 +14,7 @@ public class Customer_Add_Page extends AppCompatActivity {
 
     private EditText name,Uname,email,pno,password,rePassword;
 
-    private Button add ,close;
+    private Button add ,close,show ;
 
     private DbHandler dbHandler;
     private Context context;
@@ -34,6 +35,7 @@ public class Customer_Add_Page extends AppCompatActivity {
         pno=findViewById(R.id.cus_contact);
         password=findViewById(R.id.cus_repass);
         rePassword=findViewById(R.id.cus_passw);
+        show=findViewById(R.id.cus_show);
 
         add=findViewById(R.id.cus_add_btn);
         close=findViewById(R.id.close);
@@ -70,9 +72,23 @@ public class Customer_Add_Page extends AppCompatActivity {
 
                     }
             }
+
+
+        });
+
+
+        show.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent send = new Intent( Customer_Add_Page.this, Customer_View_Page.class );
+                startActivity(send);
+            }
         });
 
     }
+
+
+
     public boolean validation(String number,String pass,String repass){
         if(number.length()!=10){
              pno.requestFocus();
