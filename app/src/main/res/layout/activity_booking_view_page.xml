@@ -21,7 +21,7 @@
 
 
     <EditText
-        android:id="@+id/Order_id"
+        android:id="@+id/id"
         android:layout_width="236dp"
         android:layout_height="39dp"
         android:layout_marginTop="8dp"
@@ -54,7 +54,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.531"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Order_id"
+        app:layout_constraintTop_toBottomOf="@+id/id"
         tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
@@ -76,7 +76,7 @@
         tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
-        android:id="@+id/booking_cus_contact"
+        android:id="@+id/booking_cus_mail"
         android:layout_width="236dp"
         android:layout_height="39dp"
         android:layout_marginTop="24dp"
@@ -95,7 +95,7 @@
         tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
-        android:id="@+id/booking_cus_Email"
+        android:id="@+id/booking_cus_vtype"
         android:layout_width="236dp"
         android:layout_height="39dp"
         android:layout_marginTop="24dp"
@@ -109,7 +109,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.531"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/booking_cus_contact"
+        app:layout_constraintTop_toBottomOf="@+id/booking_cus_mail"
         tools:ignore="TouchTargetSizeCheck" />
 
 
@@ -129,7 +129,7 @@
         app:layout_constraintHorizontal_bias="0.525"
 
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/booking_cus_Email"
+        app:layout_constraintTop_toBottomOf="@+id/booking_cus_vtype"
         app:layout_constraintVertical_bias="0.207"
         tools:ignore="TouchTargetSizeCheck" />
 

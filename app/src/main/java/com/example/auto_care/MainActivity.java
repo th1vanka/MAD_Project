@@ -55,8 +55,10 @@ public class MainActivity extends AppCompatActivity {
         bookings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent send = new Intent( MainActivity.this, Booking_Details_Page.class );
+                Intent send = new Intent( MainActivity.this, Bookings_main.class );
                 startActivity(send);
+
+
             }
         });
 

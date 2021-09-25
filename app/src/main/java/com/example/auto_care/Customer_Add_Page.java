@@ -4,11 +4,21 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
+import java.util.Properties;
 
 public class Customer_Add_Page extends AppCompatActivity {
 
@@ -42,13 +52,15 @@ public class Customer_Add_Page extends AppCompatActivity {
 
         count=pno.length();
 
-
         context=this;
         dbHandler=new DbHandler(context);
 
+
+
+
         add.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View view){
 
                     String Cusname = name.getText().toString();
                     String CusUname = Uname.getText().toString();
@@ -57,25 +69,31 @@ public class Customer_Add_Page extends AppCompatActivity {
                     String Cuspass=password.getText().toString();
                     String CusRepass=rePassword.getText().toString();
 
-                   //AddCustomers cus = new AddCustomers(Cusname, CusUname, CusEmail, CusPhone);
-                   //dbHandler.addCustomer(cus);
-
-                    //mDialog.setContentView(R.layout.phoneno_popup);
-                    //mDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                Intent emailIntent = new Intent(Intent.ACTION_SEND);
+                final Intent chooser;
+                emailIntent.setData(Uri.parse("mailto:"));
+                //emailIntent.setType("text/plain");
+                emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{CusEmail});
+                emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Wellcome to the AutoCare vehicle service center.");
+                emailIntent.putExtra(Intent.EXTRA_TEXT, "Use this password"+" "+ CusRepass+" "+"login to the system and change the password once use login.Thank you");
+                emailIntent.setType("message/rfc822");
+                chooser=emailIntent.createChooser(emailIntent,"send email test app");
 
                     boolean result=validation(CusPhone,Cuspass,CusRepass);
+
                     if(result==true){
 
                         AddCustomers cus = new AddCustomers(Cusname, CusUname, CusEmail, CusPhone,Cuspass);
                         dbHandler.addCustomer(cus);
                         Toast.makeText(Customer_Add_Page.this,"Successfully added",Toast.LENGTH_LONG).show();
 
+                        Intent send = new Intent( Customer_Add_Page.this, Customer_View_Page.class );
+                        startActivity(send);
+
+                        startActivity(chooser);
                     }
             }
-
-
         });
-
 
         show.setOnClickListener(new View.OnClickListener() {
             @Override

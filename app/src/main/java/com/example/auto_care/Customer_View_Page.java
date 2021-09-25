@@ -44,6 +44,7 @@ public class Customer_View_Page extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long l) {
 
                 AddCustomers addCustomers=cus.get(position);
+
                 String name=addCustomers.getCusName();
                 String uname=addCustomers.getCusUserName();
                 String email=addCustomers.getCusEmail();

@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Booking_Details_Page"
+    tools:context=".BookingComplete_View_Page"
     android:background="@drawable/background_color">
 
     <ListView
-        android:id="@+id/bookingList"
+        android:id="@+id/CompletebookingList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:paddingTop="5dp"
@@ -18,5 +18,7 @@
         app:layout_constraintTop_toTopOf="parent"
 
         />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
