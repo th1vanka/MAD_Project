@@ -13,6 +13,7 @@
         <entry key="..\:/GitHub Files/Android_Studio/MAD_Project/app/src/main/res/drawable/message.xml" value="0.3515625" />
         <entry key="..\:/GitHub Files/Android_Studio/MAD_Project/app/src/main/res/drawable/popup.xml" value="0.36153846153846153" />
         <entry key="..\:/GitHub Files/Android_Studio/MAD_Project/app/src/main/res/drawable/popupboder.xml" value="0.3515625" />
+        <entry key="..\:/GitHub Files/Android_Studio/MAD_Project/app/src/main/res/layout/CustomerSideEntrence.xml" value="0.29891304347826086" />
         <entry key="..\:/GitHub Files/Android_Studio/MAD_Project/app/src/main/res/layout/activity_booking_complete_view_page.xml" value="0.3473731884057971" />
         <entry key="..\:/GitHub Files/Android_Studio/MAD_Project/app/src/main/res/layout/activity_booking_details_page.xml" value="0.21978021978021978" />
         <entry key="..\:/GitHub Files/Android_Studio/MAD_Project/app/src/main/res/layout/activity_booking_view_page.xml" value="0.33" />
@@ -20,12 +21,15 @@
         <entry key="..\:/GitHub Files/Android_Studio/MAD_Project/app/src/main/res/layout/activity_customer_add_page.xml" value="0.33" />
         <entry key="..\:/GitHub Files/Android_Studio/MAD_Project/app/src/main/res/layout/activity_customer_delete_page.xml" value="0.33" />
         <entry key="..\:/GitHub Files/Android_Studio/MAD_Project/app/src/main/res/layout/activity_customer_view_page.xml" value="0.3374094202898551" />
-        <entry key="..\:/GitHub Files/Android_Studio/MAD_Project/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/GitHub Files/Android_Studio/MAD_Project/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/GitHub Files/Android_Studio/MAD_Project/app/src/main/res/layout/activity_order_details_page.xml" value="0.3374094202898551" />
-        <entry key="..\:/GitHub Files/Android_Studio/MAD_Project/app/src/main/res/layout/activity_order_page.xml" value="0.3374094202898551" />
+        <entry key="..\:/GitHub Files/Android_Studio/MAD_Project/app/src/main/res/layout/activity_order_page.xml" value="0.1" />
+        <entry key="..\:/GitHub Files/Android_Studio/MAD_Project/app/src/main/res/layout/activity_order_view_page.xml" value="0.276268115942029" />
+        <entry key="..\:/GitHub Files/Android_Studio/MAD_Project/app/src/main/res/layout/activity_user_admin_home.xml" value="0.1" />
         <entry key="..\:/GitHub Files/Android_Studio/MAD_Project/app/src/main/res/layout/phoneno_popup.xml" value="0.35104166666666664" />
         <entry key="..\:/GitHub Files/Android_Studio/MAD_Project/app/src/main/res/layout/single_booking.xml" value="0.33" />
         <entry key="..\:/GitHub Files/Android_Studio/MAD_Project/app/src/main/res/layout/single_customer.xml" value="0.32608695652173914" />
+        <entry key="..\:/GitHub Files/Android_Studio/MAD_Project/app/src/main/res/layout/single_order.xml" value="0.33" />
       </map>
     </option>
   </component>

@@ -13,13 +13,13 @@ import androidx.annotation.Nullable;
 
 import java.util.List;
 
-public class customerAdapter extends ArrayAdapter<AddCustomers> {
+public class UserCustomerAdapter extends ArrayAdapter<AddCustomers> {
 
     private Context context;
     private int resource;
     List<AddCustomers> addCustomers;
 
-     customerAdapter(Context context, int resource, List<AddCustomers> addCustomers){
+     UserCustomerAdapter(Context context, int resource, List<AddCustomers> addCustomers){
         super(context,resource,addCustomers);
         this.context=context;
         this.resource=resource;

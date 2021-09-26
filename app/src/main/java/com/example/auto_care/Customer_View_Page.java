@@ -35,7 +35,7 @@ public class Customer_View_Page extends AppCompatActivity {
         cus=dbHandler.getAllDetails();
 
 
-        customerAdapter adapter=new customerAdapter(context,R.layout.single_customer,cus);
+        UserCustomerAdapter adapter=new UserCustomerAdapter(context,R.layout.single_customer,cus);
         listView.setAdapter(adapter);
 
 

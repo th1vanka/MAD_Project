@@ -31,9 +31,6 @@ public class Customer_Add_Page extends AppCompatActivity {
 
     private int count;
 
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,9 +51,6 @@ public class Customer_Add_Page extends AppCompatActivity {
 
         context=this;
         dbHandler=new DbHandler(context);
-
-
-
 
         add.setOnClickListener(new View.OnClickListener() {
             @Override

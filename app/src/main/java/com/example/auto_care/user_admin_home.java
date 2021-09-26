@@ -9,7 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class user_admin_home extends AppCompatActivity {
+
 
     TextView users,order;
     Button customers,orders,bookings;
@@ -17,10 +18,11 @@ public class MainActivity extends AppCompatActivity {
     Context context;
     private DbHandler dbHandler;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_user_admin_home);
 
         context = this;
         dbHandler = new DbHandler(context);
@@ -37,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         customers.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent send = new Intent( MainActivity.this, Customer_Add_Page.class );
+                Intent send = new Intent( user_admin_home.this, Customer_Add_Page.class );
                 startActivity(send);
 
             }
@@ -45,18 +47,20 @@ public class MainActivity extends AppCompatActivity {
         orders.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent send = new Intent( MainActivity.this, Order_Details_Page.class );
+                Intent send = new Intent( user_admin_home.this, Order_Details_Page.class );
                 startActivity(send);
             }
         });
         bookings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent send = new Intent( MainActivity.this, Bookings_main.class );
+                Intent send = new Intent( user_admin_home.this, Bookings_main.class );
                 startActivity(send);
+
 
             }
         });
+
 
     }
 }

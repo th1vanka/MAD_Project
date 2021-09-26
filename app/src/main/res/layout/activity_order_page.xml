@@ -4,81 +4,136 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_color"
-    tools:context=".Order_Page">
+    tools:context=".order_page">
 
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="213dp"
-        android:layout_height="165dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"
+        android:layout_height="147dp"
         android:background="@drawable/orderr"
-        app:layout_constraintBottom_toTopOf="@+id/Order_id"
+        app:layout_constraintBottom_toTopOf="@+id/oid"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.746" />
 
     <EditText
-        android:id="@+id/Order_id"
+        android:id="@+id/oid"
         android:layout_width="236dp"
         android:layout_height="39dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginBottom="20dp"
         android:background="@drawable/customer_input"
         android:ems="10"
-        android:hint="@string/OOrder_ID"
+        android:hint="Order ID"
         android:inputType="textPersonName"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textColorHint="#919191"
+        app:layout_constraintBottom_toTopOf="@+id/cusname"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
         tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
-        android:id="@+id/Order_date"
+        android:id="@+id/cusname"
         android:layout_width="236dp"
         android:layout_height="39dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginBottom="20dp"
         android:background="@drawable/customer_input"
         android:ems="10"
-        android:hint="@string/Order_Date"
+        android:hint="Customer Name"
         android:inputType="textPersonName"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textColorHint="#919191"
+        app:layout_constraintBottom_toTopOf="@+id/cusEmail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Order_id"
         tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
-        android:id="@+id/Order_cus_Name"
+        android:id="@+id/cusEmail"
         android:layout_width="236dp"
         android:layout_height="39dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginBottom="20dp"
         android:background="@drawable/customer_input"
         android:ems="10"
-        android:hint="@string/Customer_Name"
+        android:hint="Email Address"
         android:inputType="textPersonName"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textColorHint="#919191"
+        app:layout_constraintBottom_toTopOf="@+id/itemId"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Order_date"
         tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
-        android:id="@+id/Order_cus_Email"
+        android:id="@+id/itemId"
         android:layout_width="236dp"
         android:layout_height="39dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/customer_input"
+        android:ems="10"
+        android:hint="Item Id"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+
+        android:textColor="#000000"
+        android:textColorHint="#919191"
+        app:layout_constraintBottom_toTopOf="@+id/date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/itemname"
+        android:layout_width="236dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/customer_input"
+        android:ems="10"
+        android:hint="Quntity"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textColorHint="#919191"
+        app:layout_constraintBottom_toTopOf="@+id/qun"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/qun"
+        android:layout_width="236dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="72dp"
+        android:background="@drawable/customer_input"
+        android:ems="10"
+        android:hint="@string/Meter_Reading"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+
+        android:textColor="#000000"
+        android:textColorHint="#919191"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/date"
+        android:layout_width="236dp"
+        android:layout_height="39dp"
+        android:layout_marginEnd="88dp"
+        android:layout_marginBottom="20dp"
         android:background="@drawable/customer_input"
         android:ems="10"
         android:hint="@string/Customer_Email_Address"
@@ -86,61 +141,36 @@
         android:textAlignment="center"
         android:textColor="#000000"
         android:textColorHint="#919191"
+        app:layout_constraintBottom_toTopOf="@+id/itemname"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Order_cus_Name"
-        tools:ignore="TouchTargetSizeCheck" />
-
-    <EditText
-        android:id="@+id/Order_cus_contact"
-        android:layout_width="236dp"
-        android:layout_height="39dp"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/customer_input"
-        android:ems="10"
-        android:hint="@string/Customer_Contact"
-
-        android:inputType="textPersonName"
-
-        android:textAlignment="center"
-        android:textColor="#000000"
-
-        android:textColorHint="#919191"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Order_cus_Email"
         tools:ignore="TouchTargetSizeCheck" />
 
     <Button
-        android:id="@+id/Order_delete_btn"
-        android:layout_width="108dp"
+        android:id="@+id/orderdelete_btn"
+        android:layout_width="115dp"
         android:layout_height="48dp"
-        android:layout_marginStart="88dp"
+        android:layout_marginBottom="16dp"
         android:backgroundTint="@color/Delete"
-        android:text="@string/Booking_delete"
+        android:text="Updata"
+
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/confirm_btn"
+        app:layout_constraintHorizontal_bias="0.896"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Order_cus_contact"
-        app:layout_constraintVertical_bias="0.346"
         tools:ignore="TouchTargetSizeCheck" />
 
     <Button
-        android:id="@+id/Order_confirm_btn"
-        android:layout_width="108dp"
+        android:id="@+id/confirm_btn"
+        android:layout_width="115dp"
         android:layout_height="48dp"
+        android:layout_marginEnd="88dp"
+        android:layout_marginBottom="16dp"
         android:backgroundTint="@color/Confitm"
-        android:text="@string/bookimg_confirm"
+        android:text="Complete"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.216"
-        app:layout_constraintStart_toEndOf="@+id/Order_delete_btn"
-        app:layout_constraintTop_toBottomOf="@+id/Order_cus_contact"
-        app:layout_constraintVertical_bias="0.346"
         tools:ignore="TouchTargetSizeCheck" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

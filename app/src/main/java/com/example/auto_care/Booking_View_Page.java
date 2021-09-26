@@ -17,14 +17,10 @@ import android.widget.Toast;
 public class Booking_View_Page extends AppCompatActivity {
 
     Button btn,confirm;
-
     EditText id,type,km,uname,mail,date;
-
     private DbHandler dbHandler;
     private Context context;
-
     AlertDialog.Builder builder;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,38 +62,10 @@ public class Booking_View_Page extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                String id="1";
-//                String type="abc";
-//                String km="def";
-//                String uname="ghi";
-//                String mail="gggs";
-//                String date="m";
-//                booking book = new booking(id, type, km, uname,mail,date);
-//                dbHandler.addBookings(book);
-//                Toast.makeText(Booking_View_Page.this,"Successfully added",Toast.LENGTH_LONG).show();
 
-//                builder.setTitle("Alert")
-//                        .setMessage("Do you want to delete this user")
-//                        .setCancelable(true)
-//                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-//                            @Override
-//                            public void onClick(DialogInterface dialogInterface, int i) {
-
-                                dbHandler.deletebooking(maill);
-                                Intent send = new Intent( Booking_View_Page.this, Booking_Details_Page.class );
-                                startActivity(send);
-
-//                            }
-//                        })
-//                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
-//                            @Override
-//                            public void onClick(DialogInterface dialogInterface, int i) {
-//                                dialogInterface.cancel();
-//                            }
-//                        })
-//                        .show();
-
-
+                dbHandler.deletebooking(maill);
+                Intent send = new Intent( Booking_View_Page.this, Booking_Details_Page.class );
+                startActivity(send);
 
             }
         });
@@ -118,10 +86,34 @@ public class Booking_View_Page extends AppCompatActivity {
 
             }
         });
+//                String id="1";
+//                String type="abc";
+//                String km="def";
+//                String uname="ghi";
+//                String mail="gggs";
+//                String date="m";
+//                booking book = new booking(id, type, km, uname,mail,date);
+//                dbHandler.addBookings(book);
+//                Toast.makeText(Booking_View_Page.this,"Successfully added",Toast.LENGTH_LONG).show();
+
+//                builder.setTitle("Alert")
+//                        .setMessage("Do you want to delete this user")
+//                        .setCancelable(true)
+//                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+//                            @Override
+//                            public void onClick(DialogInterface dialogInterface, int i) {
 
 
 
-
+//                            }
+//                        })
+//                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
+//                            @Override
+//                            public void onClick(DialogInterface dialogInterface, int i) {
+//                                dialogInterface.cancel();
+//                            }
+//                        })
+//                        .show();
 
 
 

@@ -16,11 +16,12 @@ import java.util.SplittableRandom;
 public class DbHandler extends SQLiteOpenHelper{
 
     private static final int VERSION=1;
+
     private static final String DB_NAME="AutoCare";
 
 
     // admin cus database table column names
-    private static final String TABLE_NAME="customer";
+    private static final String TABLE_NAME6="customer";
 
     private static final String NAME ="name";
     private static final String USERNAME ="username";
@@ -29,7 +30,7 @@ public class DbHandler extends SQLiteOpenHelper{
     private static final String PASSWORD="password";
 
     //admin bookings
-    private static final String TABLE2_NAME="booking";
+    private static final String TABLE2_NAME7="booking";
 
     private static final String AID ="Vehicle_ID";
     private static final String ATYPE ="Vehicle_Type";
@@ -40,7 +41,7 @@ public class DbHandler extends SQLiteOpenHelper{
 
     //admin complete bookings
 
-    private static final String TABLE3_NAME="complete_booking";
+    private static final String TABLE3_NAME8="complete_booking";
 
     private static final String CID ="Vehicle_ID";
     private static final String CTYPE ="Vehicle_Type";
@@ -48,6 +49,19 @@ public class DbHandler extends SQLiteOpenHelper{
     private static final String CNAME ="UserName";
     private static final String CMAIL="Email";
     private static final String CDATE="Date";
+
+
+    //admin Order part
+
+    private static final String TABLE4_NAME9="customer_order";
+
+    private static final String OID ="order_Id";
+    private static final String OCUSNAME ="customer_Name";
+    private static final String OCUSEMAIL ="customer_Email";
+    private static final String OITEMID ="item_Id";
+    private static final String OITEMNAME ="item_Name";
+    private static final String OQUN="Qun";
+    private static final String ODATE="Date";
 
 
 
@@ -58,7 +72,7 @@ public class DbHandler extends SQLiteOpenHelper{
     @Override
     public void onCreate(SQLiteDatabase db) {
 
-        String TABLE_CREATE_QUERY="CREATE TABLE "+TABLE_NAME+" "+"("
+        String TABLE_CREATE_QUERY6="CREATE TABLE "+TABLE_NAME6+" "+"("
                 +NAME+" TEXT,"
                 +USERNAME+" TEXT,"
                 +EMAIL+" TEXT,"
@@ -66,9 +80,9 @@ public class DbHandler extends SQLiteOpenHelper{
                 +PASSWORD+" TEXT"+
                 ");";
 
-        db.execSQL(TABLE_CREATE_QUERY);
+        db.execSQL(TABLE_CREATE_QUERY6);
 
-        String TABLE2_CREATE_QUERY="CREATE TABLE "+TABLE2_NAME+" "+"("
+        String TABLE2_CREATE_QUERY7="CREATE TABLE "+TABLE2_NAME7+" "+"("
                 +AID+" TEXT,"
                 +ATYPE+" TEXT,"
                 +AKM+" TEXT,"
@@ -77,10 +91,10 @@ public class DbHandler extends SQLiteOpenHelper{
                 +ADATE+" TEXT"+
                 ");";
 
-        db.execSQL(TABLE2_CREATE_QUERY);
+        db.execSQL(TABLE2_CREATE_QUERY7);
 
 
-        String TABLE3_CREATE_QUERY="CREATE TABLE "+TABLE3_NAME+" "+"("
+        String TABLE3_CREATE_QUERY8="CREATE TABLE "+TABLE3_NAME8+" "+"("
                 +CID+" TEXT,"
                 +CTYPE+" TEXT,"
                 +CKM+" TEXT,"
@@ -89,28 +103,50 @@ public class DbHandler extends SQLiteOpenHelper{
                 +CDATE+" TEXT"+
                 ");";
 
-        db.execSQL(TABLE3_CREATE_QUERY);
+        db.execSQL(TABLE3_CREATE_QUERY8);
+
+        String TABLE4_CREATE_QUERY9="CREATE TABLE "+TABLE4_NAME9+" "+"("
+                +OID+" TEXT,"
+                +OCUSNAME+" TEXT,"
+                +OCUSEMAIL+" TEXT,"
+                +OITEMID+" TEXT,"
+                +OITEMNAME+" TEXT,"
+                +OQUN+" TEXT,"
+                +ODATE+" TEXT"+
+                ");";
+
+        db.execSQL(TABLE4_CREATE_QUERY9);
     }
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldversion, int newVersion) {
-        String DROP_TABLE_QUERY=" DROP TABLE IF EXISTS "+TABLE_NAME;
+        String DROP_TABLE_QUERY6=" DROP TABLE IF EXISTS "+TABLE_NAME6;
         //drop older table if existed
-        db.execSQL(DROP_TABLE_QUERY);
+        db.execSQL(DROP_TABLE_QUERY6);
         // create tables again
         onCreate(db);
 
 
-        String DROP_TABLE_QUERY2=" DROP TABLE IF EXISTS "+TABLE2_NAME;
+        String DROP_TABLE_QUERY7=" DROP TABLE IF EXISTS "+TABLE2_NAME7;
         //drop older table if existed
-        db.execSQL(DROP_TABLE_QUERY2);
+        db.execSQL(DROP_TABLE_QUERY7);
         // create tables again
         onCreate(db);
 
-        String DROP_TABLE_QUERY3=" DROP TABLE IF EXISTS "+TABLE3_NAME;
+        String DROP_TABLE_QUERY8=" DROP TABLE IF EXISTS "+TABLE3_NAME8;
         //drop older table if existed
-        db.execSQL(DROP_TABLE_QUERY3);
+        db.execSQL(DROP_TABLE_QUERY8);
         // create tables again
         onCreate(db);
+
+        String DROP_TABLE_QUERY9=" DROP TABLE IF EXISTS "+TABLE4_NAME9;
+        //drop older table if existed
+        db.execSQL(DROP_TABLE_QUERY9);
+        // create tables again
+        onCreate(db);
+
+
+
+
     }
 
     //add customer details
@@ -127,7 +163,7 @@ public class DbHandler extends SQLiteOpenHelper{
 
         //save to table
 
-        sqLiteDatabase.insert(TABLE_NAME,null,contentValues);
+        sqLiteDatabase.insert(TABLE_NAME6,null,contentValues);
         //if you want you can close the database
         sqLiteDatabase.close();
 
@@ -138,7 +174,7 @@ public class DbHandler extends SQLiteOpenHelper{
     public List<AddCustomers> getAllDetails(){
         List<AddCustomers> cus =new ArrayList();
         SQLiteDatabase db = getReadableDatabase();
-        String query = "SELECT * FROM "+TABLE_NAME;
+        String query = "SELECT * FROM "+TABLE_NAME6;
 
         Cursor cursor = db.rawQuery(query,null);
         if(cursor.moveToFirst()){
@@ -160,18 +196,22 @@ public class DbHandler extends SQLiteOpenHelper{
     //item delete
     public void deleteCus(String mail){
         SQLiteDatabase sqLiteDatabase=getWritableDatabase();
-        sqLiteDatabase.delete(TABLE_NAME,EMAIL +" =?", new String[]{String.valueOf(mail)});
+        sqLiteDatabase.delete(TABLE_NAME6,EMAIL +" =?", new String[]{String.valueOf(mail)});
         sqLiteDatabase.close();
     }
 
     //customer count
     public int countCustomers(){
         SQLiteDatabase sqLiteDatabase=getReadableDatabase();
-        String query= "SELECT * FROM " + TABLE_NAME;
+        String query= "SELECT * FROM " + TABLE_NAME6;
 
         Cursor cursor= sqLiteDatabase.rawQuery(query,null);
         return cursor.getCount();
     }
+
+
+
+
 
 
     //add booking details
@@ -189,7 +229,7 @@ public class DbHandler extends SQLiteOpenHelper{
 
         //save to table
 
-        sqLiteDatabase.insert(TABLE2_NAME,null,contentValues);
+        sqLiteDatabase.insert(TABLE2_NAME7,null,contentValues);
         //if you want you can close the database
         sqLiteDatabase.close();
 
@@ -200,7 +240,7 @@ public class DbHandler extends SQLiteOpenHelper{
     public List<booking> getBookDetails(){
         List<booking> book =new ArrayList();
         SQLiteDatabase db = getReadableDatabase();
-        String query = "SELECT * FROM "+TABLE2_NAME;
+        String query = "SELECT * FROM "+TABLE2_NAME7;
 
         Cursor cursor = db.rawQuery(query,null);
         if(cursor.moveToFirst()){
@@ -223,7 +263,7 @@ public class DbHandler extends SQLiteOpenHelper{
     //booking delete
     public void deletebooking(String mail){
         SQLiteDatabase sqLiteDatabase=getWritableDatabase();
-        sqLiteDatabase.delete(TABLE2_NAME,EMAIL +" =?", new String[]{String.valueOf(mail)});
+        sqLiteDatabase.delete(TABLE2_NAME7,EMAIL +" =?", new String[]{String.valueOf(mail)});
         sqLiteDatabase.close();
     }
 
@@ -243,7 +283,7 @@ public class DbHandler extends SQLiteOpenHelper{
 
         //save to table
 
-        sqLiteDatabase.insert(TABLE3_NAME,null,contentValues);
+        sqLiteDatabase.insert(TABLE3_NAME8,null,contentValues);
         //if you want you can close the database
         sqLiteDatabase.close();
 
@@ -254,7 +294,7 @@ public class DbHandler extends SQLiteOpenHelper{
     public List<booking> getCompleteBookDetails(){
         List<booking> book =new ArrayList();
         SQLiteDatabase db = getReadableDatabase();
-        String query = "SELECT * FROM "+TABLE3_NAME;
+        String query = "SELECT * FROM "+TABLE3_NAME8;
 
         Cursor cursor = db.rawQuery(query,null);
         if(cursor.moveToFirst()){
@@ -273,6 +313,58 @@ public class DbHandler extends SQLiteOpenHelper{
         }
         return book;
     }
+
+
+    //get all orders
+
+    public List<Order> getorderDetails(){
+        List<Order> orders =new ArrayList();
+        SQLiteDatabase db = getReadableDatabase();
+        String query = "SELECT * FROM "+TABLE4_NAME9;
+
+        Cursor cursor = db.rawQuery(query,null);
+        if(cursor.moveToFirst()){
+            do{
+                Order order = new Order();
+
+                order.setOid(cursor.getString(0));
+                order.setCusname(cursor.getString(1));
+                order.setCusEmail(cursor.getString(2));
+                order.setItemId(cursor.getString(3));
+                order.setItemname(cursor.getString(4));
+                order.setQun(cursor.getString(5));
+                order.setDates(cursor.getString(6));
+
+                orders.add(order);
+            }while (cursor.moveToNext());
+        }
+        return orders;
+    }
+
+    //add orders details
+
+    public void addorders(Order order){
+        SQLiteDatabase sqLiteDatabase= getWritableDatabase();
+        ContentValues contentValues=new ContentValues();
+
+        contentValues.put(OID,order.getOid());
+        contentValues.put(OCUSNAME,order.getCusname());
+        contentValues.put(OCUSEMAIL,order.getCusEmail());
+        contentValues.put(OITEMID,order.getItemId());
+        contentValues.put(OITEMNAME,order.getItemname());
+        contentValues.put(OQUN,order.getQun());
+        contentValues.put(ODATE,order.getDates());
+
+        //save to table
+
+        sqLiteDatabase.insert(TABLE4_NAME9,null,contentValues);
+        //if you want you can close the database
+        sqLiteDatabase.close();
+
+    }
+
+
+
 
 
 

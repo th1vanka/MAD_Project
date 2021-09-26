@@ -42,6 +42,7 @@ public class bookingAdapter extends ArrayAdapter<booking> {
 
 
         booking book= bookings.get(position);
+
         id.setText(book.getVehicle_ID());
         type.setText(book.getVehicle_Type());
         km.setText(book.getKm_per_day());
