@@ -362,6 +362,33 @@ public class DbHandler extends SQLiteOpenHelper{
         sqLiteDatabase.close();
 
     }
+    //oreder update
+    public int updateOrder(Order order){
+        SQLiteDatabase sqLiteDatabase= getWritableDatabase();
+        ContentValues contentValues=new ContentValues();
+
+
+        contentValues.put(OCUSNAME,order.getCusname());
+        contentValues.put(OCUSEMAIL,order.getCusEmail());
+        contentValues.put(OITEMID,order.getItemId());
+        contentValues.put(OITEMNAME,order.getItemname());
+        contentValues.put(OQUN,order.getQun());
+        contentValues.put(ODATE,order.getDates());
+
+        int status=sqLiteDatabase.update(TABLE4_NAME9,contentValues,OID +" =?",new String[]{String.valueOf(order.getOid())});
+        sqLiteDatabase.close();
+
+        return status;
+    }
+
+    //order delete
+    public void deleteOrders(String id){
+        SQLiteDatabase sqLiteDatabase=getWritableDatabase();
+        sqLiteDatabase.delete(TABLE4_NAME9,OID +" =?", new String[]{String.valueOf(id)});
+        sqLiteDatabase.close();
+    }
+
+
 
 
 

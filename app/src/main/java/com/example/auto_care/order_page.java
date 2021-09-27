@@ -62,6 +62,18 @@ public class order_page extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                Intent send = new Intent( order_page.this, order_update_page.class );
+                send.putExtra("id",id);
+                send.putExtra("name",cname);
+                send.putExtra("mail",cmail);
+                send.putExtra("iid",iiid);
+                send.putExtra("iname",iname);
+                send.putExtra("qun",iqun);
+                send.putExtra("date",datee);
+                startActivity(send);
+
+
+
             }
         });
 

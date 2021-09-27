@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".order_update_page">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="213dp"
+        android:layout_height="147dp"
+        android:background="@drawable/orderr"
+        app:layout_constraintBottom_toTopOf="@+id/uoid"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.746" />
+
+    <EditText
+        android:id="@+id/uoid"
+        android:layout_width="236dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/customer_input"
+        android:ems="10"
+        android:hint="Order ID"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textColorHint="#919191"
+        app:layout_constraintBottom_toTopOf="@+id/ucusname"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/ucusname"
+        android:layout_width="236dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/customer_input"
+        android:ems="10"
+        android:hint="Customer Name"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textColorHint="#919191"
+        app:layout_constraintBottom_toTopOf="@+id/ucusEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/ucusEmail"
+        android:layout_width="236dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/customer_input"
+        android:ems="10"
+        android:hint="Email Address"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textColorHint="#919191"
+        app:layout_constraintBottom_toTopOf="@+id/uitemId"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/uitemId"
+        android:layout_width="236dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/customer_input"
+        android:ems="10"
+        android:hint="Item Id"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+
+        android:textColor="#000000"
+        android:textColorHint="#919191"
+        app:layout_constraintBottom_toTopOf="@+id/udate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/uitemname"
+        android:layout_width="236dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/customer_input"
+        android:ems="10"
+        android:hint="Quntity"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textColorHint="#919191"
+        app:layout_constraintBottom_toTopOf="@+id/uqun"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/uqun"
+        android:layout_width="236dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="72dp"
+        android:background="@drawable/customer_input"
+        android:ems="10"
+        android:hint="@string/Meter_Reading"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+
+        android:textColor="#000000"
+        android:textColorHint="#919191"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/udate"
+        android:layout_width="236dp"
+        android:layout_height="39dp"
+        android:layout_marginEnd="88dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/customer_input"
+        android:ems="10"
+        android:hint="@string/Customer_Email_Address"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textColorHint="#919191"
+        app:layout_constraintBottom_toTopOf="@+id/uitemname"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/uorderdelete_btn"
+        android:layout_width="115dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/Confitm"
+        android:text="Updata"
+
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/uconfirm_btn"
+        app:layout_constraintHorizontal_bias="0.896"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/uconfirm_btn"
+        android:layout_width="115dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="88dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/Delete"
+        android:text="Delete"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -12,19 +12,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Auto_Care">
         <activity
+            android:name=".order_home"
+            android:exported="true" />
+        <activity
+            android:name=".order_update_page"
+            android:exported="true" />
+        <activity
             android:name=".order_page"
-            android:exported="true">
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".user_admin_home"
             android:exported="true">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity
             android:name=".Bookings_main"
@@ -34,9 +37,7 @@
             android:exported="true" />
         <activity
             android:name=".Order_Details_Page"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".Booking_View_Page"
             android:exported="true" />
@@ -54,9 +55,7 @@
             android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
 
         <meta-data
             android:name="preloaded_fonts"

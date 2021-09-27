@@ -47,7 +47,7 @@ public class user_admin_home extends AppCompatActivity {
         orders.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent send = new Intent( user_admin_home.this, Order_Details_Page.class );
+                Intent send = new Intent( user_admin_home.this, order_home.class );
                 startActivity(send);
             }
         });
