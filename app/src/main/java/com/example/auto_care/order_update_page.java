@@ -58,6 +58,7 @@ public class order_update_page extends AppCompatActivity {
         date.setText( datee);
 
         String idd=oid.getText().toString();
+        int d=Integer.parseInt(idd);
 
 
 
@@ -72,7 +73,10 @@ public class order_update_page extends AppCompatActivity {
                 String iqun=qun.getText().toString();
                 String idate=date.getText().toString();
 
-                Order order=new Order(idd,cname,cmail,iid,iname,iqun,idate);
+
+
+
+                Order order=new Order( d,cname,cmail,iid,iname,iqun,idate);
 
                 int status= dbHandler.updateOrder(order);
                 Intent send = new Intent( order_update_page.this, user_admin_home.class );

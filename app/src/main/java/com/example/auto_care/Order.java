@@ -1,7 +1,7 @@
 package com.example.auto_care;
 
 public class Order {
-    private String oid;
+    private int oid;
     private String cusname;
     private String cusEmail;
     private String itemId;
@@ -13,7 +13,7 @@ public class Order {
 
     }
 
-    public Order(String oid, String cusname, String cusEmail, String itemId, String itemname, String qun, String date) {
+    public Order(int oid, String cusname, String cusEmail, String itemId, String itemname, String qun, String date) {
         this.oid = oid;
         this.cusname = cusname;
         this.cusEmail = cusEmail;
@@ -24,11 +24,11 @@ public class Order {
     }
 
 
-    public String getOid() {
+    public int getOid() {
         return oid;
     }
 
-    public void setOid(String oid) {
+    public void setOid(int oid) {
         this.oid = oid;
     }
 

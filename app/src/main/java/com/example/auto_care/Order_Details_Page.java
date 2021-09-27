@@ -40,7 +40,7 @@ public class Order_Details_Page extends AppCompatActivity {
 
                 Order order=orders.get(position);
 
-                  String oid=order.getOid();
+                  int oid=order.getOid();
                   String cusname=order.getCusname();
                   String cusEmail=order.getCusEmail();
                   String itemId=order.getItemId();

@@ -77,23 +77,6 @@ public class order_page extends AppCompatActivity {
             }
         });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //        update.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View view) { String a="a";
